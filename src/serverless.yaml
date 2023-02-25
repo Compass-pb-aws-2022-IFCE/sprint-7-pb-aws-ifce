@@ -1,0 +1,18 @@
+service: pokebot
+provider: 
+  name: aws
+  runtime: python3.9
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action: 'lambda:InvokeFunction'
+          Resource: 
+            - 'arn:aws:lex:us-east-1:160310512804:bot/832P2LBUPP'
+
+
+functions:
+  func-principal-lex:
+    handler: funcaoPrincipal.lambda_handler
+  func-info-pokemon:
+    handler: funcaoInfo.lambda_handler
