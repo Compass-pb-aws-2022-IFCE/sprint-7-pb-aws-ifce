@@ -5,54 +5,48 @@ Avaliação da sétima sprint do programa de bolsas Compass UOL para formação 
 
 ***
 
-## Execução
+## Sumário
 
-Com base na [Documentação Amazon Lex](https://compasso-my.sharepoint.com/:f:/g/personal/lucas_sousa_compasso_com_br/Eph8d9BDeRhGhBzyoAYRLZUBhfjA54P1-5YHERGaN5_Osg?e=1ibFDI), crie um chatbot utilizando o Amazon Lex V2 e o conecte a uma plataforma de mensageria.
+* [Objetivo](#objetivo)
+* [Tecnologias](#tecnologias)
+* [PetBot](#petbot)
+  * [Intents](#intents)
+  * [Slots](#slots)
+* [Dificuldades](#dificuldades)
+* [Autores](#autores)
 
-**Especificações**:
+***
+## Objetivo
 
-- Função do chatbot é de livre escolha do desenvolvedor;
-- Conexões: O chatbot deve ser disponibilizado em uma das seguintes plataformas:  
-  - Slack - [Conexão Slack](https://docs.aws.amazon.com/pt_br/lex/latest/dg/slack-bot-association.html);  
-  - Web - [Web](https://github.com/aws-samples/aws-lex-web-ui);
-- Construção:   
-  - Intents:    
-    - O chatbot deve possuir ao menos 4 intents distintas;  
-  - Slots:    
-    - Captação de informações presentes no texto;    
-    - Solicitação de informações quando o slot não for reconhecido;    
-    - Confirmação de informações;    
-    - O chatbot deve captar ao menos 3 slots no decorrer do fluxo;
-- O chatbot deve utilizar-se de menu com botões (Response Cards);
-- Tratamento de erros (fallback);
-- (Opcional) Uso de conditional branching para controle de fluxos ([Doc Conditional Branching](https://docs.aws.amazon.com/pt_br/lexv2/latest/dg/paths-branching.html));
+Desenvolvimento de um chatbot utilizando a ferramenta Amazon Lex V2
+[Documentação Amazon Lex](https://compasso-my.sharepoint.com/:f:/g/personal/lucas_sousa_compasso_com_br/Eph8d9BDeRhGhBzyoAYRLZUBhfjA54P1-5YHERGaN5_Osg?e=1ibFDI)
+*** 
+## Tecnologias
+
+* [Amazon Lex](https://aws.amazon.com/pt/lex/) 
+* [Slack API](https://api.slack.com/)
+*** 
+## PetBot
+PetBot é um chatbot desenvolvido na plataforma Amazon Lex v2 para ajudar donos de animais de estimação a cuidar de seus pets e comprar produtos e serviços oferecidos pelo petshop. Ele oferece uma interface conversacional simples e intuitiva, permitindo que os usuários interajam com o chatbot de forma natural e eficiente.
+
+### Intents
+
+
+### Slots
+
+
 
 ***
 
-## O que será avaliado?
+## Dificuldades
 
-- Projeto em produção na AWS;
-- Entendimento do chatbot e o que ele soluciona;
-- Criatividade em relação ao tema escolhido para o desenvolvimento do chatbot;
-- Intents e slots criados e informações que eles se dispõem a obter;
-- Organização:  
-  - Estrutura de intenções;  
-  - Estrutura da lógica de negócio;  
-  - Divisão de responsabilidades da equipe;  
-  - Funcionalidade do chatbot;
-- Objetividade do README.md.
+- 
+- 
 
 ***
 
-## Entrega
+## Autores
 
-- Aceitar o convite do repositório da sprint-7-pb-aws-ifce;
-- **O trabalho deve ser feito em grupos de 3 ou 4 integrantes**;
-  - Não repetir formação de grupos já criados em sprints anteriores;
-- Criar uma branch no repositório com o formato grupo-número (Exemplo: grupo-1);
-- Subir o trabalho na branch com um README.md;
-  - Documentar detalhes sobre como a avaliação foi desenvolvida;
-  - Dificuldades conhecidas;
-  - Como utilizar o sistema;
-  - Export do bot Lex em formato .zip;
-- O prazo de entrega é até às 12h do dia 27/02/2023 no repositório do github ([https://github.com/Compass-pb-aws-2022-IFCE/sprint-7-pb-aws-ifce](https://github.com/Compass-pb-aws-2022-IFCE/sprint-7-pb-aws-ifce)).
+* [Davi Santos](https://github.com/davi222-santos)
+* [Humberto Sampaio](https://github.com/Humbert010)
+* [Samara Alcantara](https://github.com/SamaraAlcantara)
