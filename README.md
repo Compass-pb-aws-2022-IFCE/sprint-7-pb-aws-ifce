@@ -18,8 +18,8 @@ Avaliação da sétima sprint do programa de bolsas Compass UOL para formação 
 ***
 ## Objetivo
 
-Desenvolvimento de um chatbot utilizando a ferramenta Amazon Lex V2
-[Documentação Amazon Lex](https://compasso-my.sharepoint.com/:f:/g/personal/lucas_sousa_compasso_com_br/Eph8d9BDeRhGhBzyoAYRLZUBhfjA54P1-5YHERGaN5_Osg?e=1ibFDI)
+Desenvolvimento de um chatbot utilizando a ferramenta Amazon Lex V2 e integração com uma API de mensagens a escolha do grupo de desenvolvedores.
+
 *** 
 ## Tecnologias
 
@@ -27,20 +27,47 @@ Desenvolvimento de um chatbot utilizando a ferramenta Amazon Lex V2
 * [Slack API](https://api.slack.com/)
 *** 
 ## PetBot
-PetBot é um chatbot desenvolvido na plataforma Amazon Lex v2 para ajudar donos de animais de estimação a cuidar de seus pets e comprar produtos e serviços oferecidos pelo petshop. Ele oferece uma interface conversacional simples e intuitiva, permitindo que os usuários interajam com o chatbot de forma natural e eficiente.
+
+O PetBot é um chatbot desenvolvido na plataforma Amazon Lex V2 que visa auxiliar os donos de animais de estimação a cuidar de seus pets de forma prática, por meio dele o cliente pode comprar produtos para animais, receber dicas e cuidades e ainda agendar serviços oferecidos pelo petshop. 
+Ele oferece uma interface conversacional simples e intuitiva, permitindo que os usuários interajam com o chatbot de forma natural e eficiente.
+
+image.png
 
 ### Intents
 
+* SaudacaoIntent:
+
+* AgendarServicoIntent:
+
+* AdquirirProdutoIntent:
+
+* ComprarBrinquedoIntent:
+
+* ComprarRemedioIntent:
+
+* ComprarRacaoIntent:
+
+* DicasDeCuidadoIntent:
+
+* EncerramentoIntent:
+
+* FallbackIntent:
 
 ### Slots
 
+* CategoriaProduto:
+* Brinquedo:
+* Remedio:
+* Animal:
+* Servico:
+* Racao:
 
 
 ***
 
 ## Dificuldades
 
-- 
+- Uso dos Session Attributes
 - 
 
 ***
