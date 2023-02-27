@@ -48,14 +48,14 @@ Baseado nessa problemática, criamos a Riri, uma assistente virtual que tem como
 ![img](https://i.imgur.com/jghyMYY.png)
 ![img](https://i.imgur.com/SKQqDFe.png)
 
-### Intent TVaCaboProblems
-<!-- ![img]() -->
+### Intent TVaCaboProblems:
+![intentTVProblem](https://user-images.githubusercontent.com/119500249/221605831-0a5f9f6b-348c-4b57-94b6-817f214a844a.png)
 
-### Intent
-<!-- ![img]() -->
+### Intent PerdaSinalTV:
+![IntentPerdaSinalTV](https://user-images.githubusercontent.com/119500249/221606662-54054bc2-7856-4fd8-b1a8-1b3823c45af6.png)
 
-### Intent
-<!-- ![img]() -->
+### Intent ImagemCongeladaTV:
+![IntentImagemCongelada](https://user-images.githubusercontent.com/119500249/221610031-d10a2ca3-825f-4f66-a7b2-f21df0a66d89.png)
 
 ### Intent EncerrarAtendimento
 ![img](https://i.imgur.com/KqYfZqj.png)
