@@ -10,7 +10,6 @@ Avaliação da sétima sprint do Programa de Bolsas Compass UOL para formação 
 * [Objetivo](#objetivo)
 * [Ferramentas](#ferramentas)
 * [Desenvolvimento](#desenvolvimento)
-  * [Estrutura e Lógica do Negócio](#estrutura e lógica do negócio)
 * [Autores](#autores)
 
 ## Objetivo
@@ -21,17 +20,10 @@ Criar um chatbot utilizando o Amazon Lex, conectá-lo a uma plataforma de menssa
 
 ## Ferramentas
 
-* [AWS](https://aws.amazon.com/pt/) 
-
-Plataforma de computação em nuvem da Amazon.
-* [Amazon Lex](https://aws.amazon.com/pt/lex/) 
-
-Serviço para criar interfaces de conversação em qualquer aplicativo usando voz e texto.
-* [Lambda](https://aws.amazon.com/lambda/) 
-
-Serviço de computação *serverless* que permite a execução de código sem a preocupação de gerenciar servidores.
+* [AWS](https://aws.amazon.com/pt/) Plataforma de computação em nuvem da Amazon.
+* [Amazon Lex](https://aws.amazon.com/pt/lex/) Serviço para criar interfaces de conversação em qualquer aplicativo usando voz e texto.
+* [Lambda](https://aws.amazon.com/lambda/) Serviço de computação *serverless* que permite a execução de código sem a preocupação de gerenciar servidores.
 * [Slack Api](https://api.slack.com/)
-
 
 ***
 
@@ -85,43 +77,35 @@ def lambda_handler(event, context):
 
 ***
 
-## Estrutura e Lógica do negócio
+## Estrutura e Lógica do Negócio
 
 A aplicação possui vários recursos de uma pokédex, logo é possível obter informações, curiosidades a respeito de pokémons.
 
-## Estrutura de intenções/slots
+## Estrutura de Intenções/Slots
 
-1. Sucesso 
+1. *Sucesso:* 
+ É apenas uma saudação específica.
 
-É apenas uma saudação específica.
+2. *Saudação:*
+ É acionada ao se receber uma entrada que seja uma saudação e retorna um cumprimento do PokeBot.
 
-2. Saudação
+3. *Info:*
+ É acionada ao pedir alguma informação específica sobre algum pokémon, e possui dois slots: o nome do pokémon e o atributo que se deseja obter informações. Essa intent aciona uma função lambda que faz um tratamento no nome de pokémon inserido, utilizando distância de Levenshtein para encontrar a melhor correspondência de nomes de pokémons. Em seguida, é feita uma consulta a PokeAPI para obter a informação requerida e esta, se encontrada, é retornada ao usuário. 
 
-É acionada ao se receber uma entrada que seja uma saudação e retorna um cumprimento do PokeBot.
+4. *Curiosidades:*
+ É acionada quando se pede uma informação ou fato mais 'genérico', e pode ser de três tipos: lendas, curiosidades (fatos interessantes) e piadas. Também utiliza slot para capturar o tipo de curiosidade e chama uma função lambda para obter a resposta.
 
-3. Info
+5. *InfoSobreInfo:*
+ É uma função auxiliar que mostra informações sobre como utilizar o recurso de informações e utiliza cards para isso.
 
-É acionada ao se pedir alguma informação específica sobre algum pokémon, e possui dois slots: o nome do pokémon e o atributo que se deseja obter informações. Essa intent aciona uma função lambda que faz um tratamento no nome de pokémon inserido, utilizando distância de Levenshtein para encontrar a melhor correspondência de nomes de pokémons. Em seguida, é feita uma consulta a PokeAPI para obter a informação requerida e esta, se encontrada, é retornada ao usuário. 
+6. *InfoSobreCuriosidades:*
+ Semelhante à anterior, mas voltada a dar informações sobre como consultar o recurso de curiosidades.
 
-4. Curiosidades
+7. *Despedida:*
+ É acionada ao receber alguma entrada que seja uma despedida, e encerra o chat.
 
-É acionada quando se pede uma informação ou fato mais 'genérico', e pode ser de três tipos: lendas, curiosidades (fatos interessantes) e piadas. Também utiliza slot para capturar o tipo de curiosidade e chama uma função lambda para obter a resposta.
-
-5. InfoSobreInfo
-
-É uma função auxiliar que mostra informações sobre como utilizar o recurso de informações e utiliza cards para isso.
-
-6. InfoSobreCuriosidades
-
-Semelhante à anterior, mas voltada a dar informações sobre como consultar o recurso de curiosidades.
-
-7. Despedida
-
-É acionada ao receber alguma entrada que seja uma despedida, e encerra o chat.
-
-8. Fallback
-
-É acionada quando algum erro ocorre e não se pode compreender qual era a intenção do usuário.
+8. *Fallback:*
+ É acionada quando algum erro ocorre e não se pode compreender qual era a intenção do usuário.
 
 ## Autores
 
