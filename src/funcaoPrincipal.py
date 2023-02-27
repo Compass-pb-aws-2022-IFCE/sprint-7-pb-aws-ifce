@@ -1,28 +1,8 @@
 import json
 import boto3
+from functions import prepareResponse
 
 lambda_client = boto3.client('lambda')
-
-def prepareResponse(event, msgText):
-    response = {
-		  "sessionState": {
-		    "dialogAction": {
-		      "type": "Close"
-		    },
-		    "intent": {
-		      "name": event['sessionState']['intent']['name'],
-				  "state": "Fulfilled"
-		    }
-		  },
-		  "messages": [
-	       {
-	         "contentType": "PlainText",
-	         "content": msgText
-	        }
-	       ]
-	   }
-    
-    return response
 
 def responseCard(event, context):
     # Faz alguma lógica com base na entrada do usuário
@@ -95,6 +75,11 @@ def lambda_handler(event, context):
                 response = prepareResponse(event, "Esse pokemon não existe!")
         else:
              response = prepareResponse(event,"Desculpe, reescreva sua frase passando qual pokemon deseja saber o atributo: " + "Ex: qual o peso do Pikachu")
-    elif intentName == 'saudacao':
-        response = prepareResponse(event, "deu certo!!")
+    elif intentName=='CuriosidadesIntent':
+        
+        response = lambda_client.invoke(FunctionName='pokebot-dev-func-curiosidades-pokemon', Payload=json.dumps(event))
+        response = json.loads((response["Payload"].read().decode('utf-8'))) 
+        print(response)
+        mensagem = response["body"]
+        response = prepareResponse(event,mensagem)
     return response

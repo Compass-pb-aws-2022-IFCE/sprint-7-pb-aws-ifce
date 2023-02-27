@@ -9,6 +9,9 @@ provider:
           Action: 'lambda:InvokeFunction'
           Resource: 
             - 'arn:aws:lex:us-east-1:160310512804:bot/832P2LBUPP'
+            - 'arn:aws:iam::160310512804:role/service-role/func-test-lex-role-z4ntultd'
+            - 'arn:aws:sts::160310512804:assumed-role/pokebot-dev-us-east-1-lambdaRole/*'
+            
 
 
 functions:
@@ -16,3 +19,5 @@ functions:
     handler: funcaoPrincipal.lambda_handler
   func-info-pokemon:
     handler: funcaoInfo.lambda_handler
+  func-curiosidades-pokemon:
+    handler: funcaoCuriosidades.lambda_handler

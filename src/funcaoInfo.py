@@ -1,5 +1,4 @@
 import json
-import boto3
 import urllib.request
 
 
@@ -21,26 +20,6 @@ def get_pokemon_info(name,atributo):
             status = {"attack": attack, "defense": defense, "hp": hp}
             return status[atributo]
 
-def prepareResponse(event, msgText):
-    response = {
-		  "sessionState": {
-		    "dialogAction": {
-		      "type": "Close"
-		    },
-		    "intent": {
-		      "name": event['sessionState']['intent']['name'],
-				  "state": "Fulfilled"
-		    }
-		  },
-		  "messages": [
-	       {
-	         "contentType": "PlainText",
-	         "content": msgText
-	        }
-	       ]
-	   }
-    
-    return response
 
 def check_pokemon_name(name):
     
