@@ -13,6 +13,7 @@ Avaliação da sétima sprint do programa de bolsas Compass UOL para formação 
 * [PetBot](#petbot)
   * [Intents](#intents)
   * [Slots](#slots)  
+* [Desenvolvimento](#desenvolvimento)
 * [Integração com Slack](#integrando-ao-slack)
 * [Acesso ao Chatbot](#acesso-à-aplicação)  
 * [Dificuldades](#dificuldades)
@@ -36,7 +37,6 @@ Desenvolvimento de um chatbot utilizando a ferramenta Amazon Lex V2 e integraç�
 O PetBot é um chatbot desenvolvido na plataforma Amazon Lex V2 que visa auxiliar os donos de animais de estimação a cuidar de seus pets de forma prática, por meio dele o cliente pode comprar produtos para animais, receber dicas e cuidades e ainda agendar serviços oferecidos pelo petshop. 
 Ele oferece uma interface conversacional simples e intuitiva, permitindo que os usuários interajam com o chatbot de forma natural e eficiente.
 
-image.png
 
 ### Intents
 
@@ -70,6 +70,11 @@ Essa intent será invocada quando o usuário selecionar a categoria brinquedo. N
 * **Racao**: Armazena os tipos de ração disponíveis para ofertar ao cliente e é usada em _comprarRacaoIntent_.
 
 
+***
+## Desenvolvimento
+Com as intents e slots criados, foi implementado uma lógica baseada no uso de conditional branching, pois com isso, o chatbot pode avaliar a intenção do usuário com base em palavras-chave ou frases específicas e, em seguida, direcioná-lo para um conjunto específico de respostas pré-programadas que correspondam àquela intenção, isso ajuda a garantir que o chatbot responda de maneira coerente e forneça informações úteis aos usuários. 
+
+Também foi usado os response cards, para que o chatbot possa fornecer opções para o usuário escolher em vez de simplesmente fornecer uma resposta de texto. Isso ajuda a tornar a interação mais envolvente e intuitiva para o usuário, permitindo que ele selecione facilmente a resposta que melhor corresponde à sua intenção. O desenvolvimento do chatbot seguiu sempre com a premissa de melhor experiência do usuário, com diversas sessões de testes de possíveis entradas que gerariam erro no chatbot.
 ***
 ## Integrando ao Slack
 Para integração com o Slack, foi
