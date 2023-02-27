@@ -1,5 +1,6 @@
 # Avaliação Sprint 7 - Programa de Bolsas Compass UOL / AWS e IFCE
 
+
 Avaliação da sétima sprint do programa de bolsas Compass UOL para formação em machine learning para AWS.
 
 
@@ -11,8 +12,11 @@ Avaliação da sétima sprint do programa de bolsas Compass UOL para formação 
 * [Tecnologias](#tecnologias)
 * [PetBot](#petbot)
   * [Intents](#intents)
-  * [Slots](#slots)
+  * [Slots](#slots)  
+* [Integração com Slack](#integrando-ao-slack)
+* [Acesso ao Chatbot](#acesso-à-aplicação)  
 * [Dificuldades](#dificuldades)
+* [Conclusão](#conclusão)
 * [Autores](#autores)
 
 ***
@@ -27,6 +31,7 @@ Desenvolvimento de um chatbot utilizando a ferramenta Amazon Lex V2 e integraç�
 * [Slack API](https://api.slack.com/)
 *** 
 ## PetBot
+![logo petbot](https://user-images.githubusercontent.com/80013300/221453200-dc3334e3-3292-4e48-bf62-2f7ce931ca35.png)
 
 O PetBot é um chatbot desenvolvido na plataforma Amazon Lex V2 que visa auxiliar os donos de animais de estimação a cuidar de seus pets de forma prática, por meio dele o cliente pode comprar produtos para animais, receber dicas e cuidades e ainda agendar serviços oferecidos pelo petshop. 
 Ele oferece uma interface conversacional simples e intuitiva, permitindo que os usuários interajam com o chatbot de forma natural e eficiente.
@@ -66,11 +71,33 @@ Essa intent será invocada quando o usuário selecionar a categoria brinquedo. N
 
 
 ***
+## Integrando ao Slack
+Para integração com o Slack, foi
+necessário seguir os seguintes passos:  
+1 - Inscrever-se no Slack;  
+2 - Criar um aplicativo no slack;  
+3 - Criar um canal de integração no chatbot;  
+4 - Após a criação do canal de integração dentro do chatbot será disponibilizado os seguintes URLs que será necessários para o proceder da integração; 
+
+![print endpoint](https://user-images.githubusercontent.com/80013300/221460663-86a33598-04f0-4a09-9b3e-44c9abfefe42.png)
+
+5 - No aplicativo do Slack é necessário configurar os links disponibilizados no canal de integração do chatbot, inserindo a URL Endpoint na sessão do slack “OAuth & Permissions” e o URL Endpoint OAuth na sessão do slack “Event Subscriptions”;  
+6 - Após isso, o app está disponível para ser instalado no workspace.
+***
+## Acesso à aplicação
+Para realizar acesso ao ambiente de utilização do petbot, clique [aqui](https://petbotworkspace.slack.com/apps/A04RU9XEMGQ-petbot?utm_source=in-prod&utm_medium=inprod-link_app_directory-channel_settings-click&tab=settings&next_id=0).
+***
 
 ## Dificuldades
 
 - Uso dos Session Attributes
-- 
+- Integração com lambda
+
+***
+
+## Conclusão
+
+O desenvolvimento da avaliação foi concluído com sucesso. Sendo de grande importância para a equipe colocar em prática todos os conceitos estudados durante os cursos da sprint e aprimorar ainda mais o conhecimento voltado para chatbots. Sempre mantendo uma organização como equipe visando o aprendizado e compreensão de todo processo de desenvolvimento do chatbot por parte de todos os integrantes da equipe, com isso, finalizando o projeto de forma satisfatória.
 
 ***
 
