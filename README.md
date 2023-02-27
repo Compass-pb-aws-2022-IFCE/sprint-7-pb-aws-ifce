@@ -35,32 +35,34 @@ image.png
 
 ### Intents
 
-* SaudacaoIntent:
+* **SaudacaoIntent**:
+Cumprimenta o usuário na inicialização do atendimento e pergunta sua intenção para direcioná-lo ao intent referente a ela.
 
-* AgendarServicoIntent:
+* **AgendarServicoIntent**: Caso o cliente escolha essa opção no menu inicial, serão mostradas os tipos de serviços disponíveis e ele deve optar entre um deles (banho, tosa ou veterinário) ou retornar. A resposta será coletada em forma de slot e tratada em uma conditional branch para direcioná-lo a elicitação de slot mais espécifica para sua solicitação, cofirmando o agendamento no final.
 
-* AdquirirProdutoIntent:
+* **AdquirirProdutoIntent**: É mais uma opção do menu incial, porém, neste caso serão mostradas as categorias de produto, sendo elas: ração, medicamento ou brinquedo. Ao escolher uma delas, o slot referente será preenchido e servirá de parâmetro para uma conditional branch que invocará o intent mais específico para a categoria selecionada.
 
-* ComprarBrinquedoIntent:
+* **ComprarBrinquedoIntent**:
+Essa intent será invocada quando o usuário selecionar a categoria brinquedo. Nela serão mostradas as opções de brinquedo e a opção de sair caso o usuário não encontre o que busca. No final da compra será perguntado qual o próximo objetivo do cliente para que ele possa ser redirecionado mais rapidamente a ela.
 
-* ComprarRemedioIntent:
+* **ComprarRemedioIntent**: Essa intent funciona da mesma forma que a anterior, tanto o modo de invocação quanto a lógica. A diferença está apenas na listagem dos produtos, que agora são remédios, e nas informações solicitadas para sua realização. A separação se dá apenas por fins de setorização dos produtos.
 
-* ComprarRacaoIntent:
+* **ComprarRacaoIntent**: É mais uma intent que segue a mesma estrutura das duas anteriores, porém com os produtos sendo rações. Vale mencionar também que em todas intents desse tipo é solicitada confirmação para dar possibilidade de cancelar o procedimento.
 
-* DicasDeCuidadoIntent:
+* **DicasDeCuidadoIntent**: Nessa intent é perguntada a espécie do animal do cliente e partir dela são retornadas variadas dicas de cuidado.
 
-* EncerramentoIntent:
+* **EncerramentoIntent**: Essa intent é opção em todas etapas do atendimento, serve para o encerrar o atendimento no momento em que desejar.
 
-* FallbackIntent:
+* **FallbackIntent**: Intent padrão que serve para tratamento de exceções, foi configurado para ser invocado em qualquer momento que o usuário informa algo que não corresponde às opções disponíves fazendo com que a intent volte a tentar capturar o slot necessário.
 
 ### Slots
 
-* CategoriaProduto:
-* Brinquedo:
-* Remedio:
-* Animal:
-* Servico:
-* Racao:
+* **CategoriaProduto**: serve como uma espécie de variável de controle para a uma a conditional branch da _comprarProdutoIntent_, comparando a opção informada pelo usuário para que seja feito o direcionamento à intent correta.
+* **Brinquedo**: Serve para armazenar o estoque de brinquedos e contém sinônimos, usado na _comprarBrinquedoIntent_.
+* **Remedio**: Serve para armazenar o estoque de remédios e contém sinônimos, usado na _comprarRemedioIntent_.
+* **Animal**: Serve para coletar o tipo do animal e partir dele mostrar opções específicas para a espécie, é usado em todas as intents de compra, agendamento de serviços e também na sessão de dicas.
+* **Servico**: Armazena as categorias de serviço ofertas e contém sinônimos para ajudar no tratamento de erros, é usada na _agendarServicoIntent_.
+* **Racao**: Armazena os tipos de ração disponíveis para ofertar ao cliente e é usada em _comprarRacaoIntent_.
 
 
 ***
