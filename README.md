@@ -61,7 +61,7 @@ Baseado nessa problemática, criamos a Riri, uma assistente virtual que tem como
 ![img](https://i.imgur.com/KqYfZqj.png)
 
 ### Intent FallBackIntent
-<!-- ![img]() -->
+![img](https://imgur.com/imivOa5.png)
 ***
 ## Conexão com Slack
 
