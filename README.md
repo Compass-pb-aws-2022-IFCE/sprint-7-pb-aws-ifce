@@ -38,8 +38,8 @@ Com a integração do Slack com o Amazon Lex, é possível melhorar a comunicaç
  - Dificuldade em compartilhar o chatbot;
 
 ## Acesso ao Chatbot
-Para acessar a aplicação [clica nesse link](https://app.slack.com/client/T04T500T3B2/D04T51EDLSU).
+Para acessar a aplicação [clica nesse link](https://join.slack.com/t/cite-grupo/shared_invite/zt-1qinm3z0j-RCLi3fD5x5wsudHVsclkAQ).
 ## Equipe
-Rangel Melo.
-Luiz Carlos.
-Tecla Fernandes. 
+- Rangel Melo.
+- Luiz Carlos.
+- Tecla Fernandes. 
