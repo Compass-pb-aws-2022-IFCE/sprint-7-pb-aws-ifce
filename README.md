@@ -55,7 +55,7 @@ Baseado nessa problemática, criamos a Riri, uma assistente virtual que tem como
 ![IntentPerdaSinalTV](https://user-images.githubusercontent.com/119500249/221606662-54054bc2-7856-4fd8-b1a8-1b3823c45af6.png)
 
 ### Intent ImagemCongeladaTV:
-![IntentImagemCongelada](https://user-images.githubusercontent.com/119500249/221610031-d10a2ca3-825f-4f66-a7b2-f21df0a66d89.png)
+![IntentImagemCongelada](https://user-images.githubusercontent.com/119500249/224077111-7f2a2d20-11dd-4c6a-b29c-b4e46dfe3dc5.png)
 
 ### Intent EncerrarAtendimento
 ![img](https://i.imgur.com/KqYfZqj.png)
