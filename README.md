@@ -1,58 +1,45 @@
-# Avaliação Sprint 7 - Programa de Bolsas Compass UOL / AWS e IFCE
+# 📑 Avaliação Sprint 7 - Programa de Bolsas Compass UOL 
+## Finalidade do Projeto
+Os chatbots são uma solução cada vez mais popular para melhorar a eficiência e a qualidade do atendimento ao cliente. No caso do setor de TI do Município de Tauá, que recebe diariamente uma grande quantidade de solicitações de suporte técnico por meio do WhatsApp, o uso de um chatbot pode ser transformador.
 
-Avaliação da sétima sprint do programa de bolsas Compass UOL para formação em machine learning para AWS.
+Com a implementação de um chatbot, as solicitações de suporte técnico podem ser atendidas de forma mais rápida e eficiente. O chatbot pode ser programado para entender e responder automaticamente a uma ampla variedade de solicitações, desde a troca de toner de impressora até o upgrade de computadores.
+
+Isso significa que as solicitações são atendidas em tempo hábil, sem a necessidade de um técnico de TI responder manualmente cada mensagem, o que pode levar muito tempo e deixar o serviço acumulado. Além disso, o chatbot também pode ser programado para oferecer soluções simples e comuns para problemas técnicos, permitindo que os técnicos se concentrem em tarefas mais complexas e de maior valor agregado.
+
+Outra vantagem do uso do chatbot é a sua disponibilidade 24 horas por dia, 7 dias por semana. Isso significa que os usuários podem fazer solicitações a qualquer momento, sem precisar esperar pelo horário de trabalho dos técnicos de TI. Isso é particularmente importante em situações de emergência, como interrupções do serviço ou falhas nos sistemas. 
+
+## Requisitos
+- Conta na AWS.
+- Conta no Slack.
+
+## Intents
+- Setores: Define os setores que compõe a Secretaria de Educação;
+- Impressora: Fornece informações para a troca de toner/tinta ou problemas de drives na impressora;
+- Internet: Fornece informações quando um setor estar sem internet ou quando danifica algum equipamento;
+- Atendimento: Fornece as opções disponíveis para o usuário ter acesso;
+- Saudações: Inicía o atendimento ao serviço;
+- Impressorafunction
+- Documentos: Emite as opções de boletim e histórico;
+- FallbackIntent: Tratamento de rede.
 
 
-***
+## Conexão do Amazon Lex com Slack 
+Primeiramente, é necessário criar uma conta no Slack e em seguida, um Workspace. Após isso, é preciso criar uma aplicação Slack no console da API do Slack. Nessa aplicação, é necessário configurar os recursos, tais como Interactivity & Shortcuts e Basic Information, para obter as credenciais do aplicativo que serão utilizadas no Amazon Lex.
 
-## Execução
+Em seguida, é preciso integrar a aplicação Slack com o Amazon Lex Bot. Para fazer isso, é necessário abrir o console do Amazon Lex, selecionar o bot criado e escolher a guia Canais. Em seguida, é preciso selecionar a plataforma Slack, escolher um nome para a integração e digitar as credenciais obtidas no passo anterior.
 
-Com base na [Documentação Amazon Lex](https://compasso-my.sharepoint.com/:f:/g/personal/lucas_sousa_compasso_com_br/Eph8d9BDeRhGhBzyoAYRLZUBhfjA54P1-5YHERGaN5_Osg?e=1ibFDI), crie um chatbot utilizando o Amazon Lex V2 e o conecte a uma plataforma de mensageria.
+Depois de concluir a integração, é necessário voltar para a aplicação Slack e atualizar os recursos OAuth & Permissions, Bot Token Scopes, Interactivity & Shortcuts e Event Subscriptions. Por fim, é necessário marcar o checkbox da seção Messages Tab no menu App Home.
 
-**Especificações**:
+Após concluir todos esses passos, é possível testar a integração. No menu Manage Distribution, escolha Add to Slack para instalar a aplicação e forneça as permissões. Em seguida, acesse seu Workspace do Slack e inicie um bate-papo.
 
-- Função do chatbot é de livre escolha do desenvolvedor;
-- Conexões: O chatbot deve ser disponibilizado em uma das seguintes plataformas:  
-  - Slack - [Conexão Slack](https://docs.aws.amazon.com/pt_br/lex/latest/dg/slack-bot-association.html);  
-  - Web - [Web](https://github.com/aws-samples/aws-lex-web-ui);
-- Construção:   
-  - Intents:    
-    - O chatbot deve possuir ao menos 4 intents distintas;  
-  - Slots:    
-    - Captação de informações presentes no texto;    
-    - Solicitação de informações quando o slot não for reconhecido;    
-    - Confirmação de informações;    
-    - O chatbot deve captar ao menos 3 slots no decorrer do fluxo;
-- O chatbot deve utilizar-se de menu com botões (Response Cards);
-- Tratamento de erros (fallback);
-- (Opcional) Uso de conditional branching para controle de fluxos ([Doc Conditional Branching](https://docs.aws.amazon.com/pt_br/lexv2/latest/dg/paths-branching.html));
+Com a integração do Slack com o Amazon Lex, é possível melhorar a comunicação de uma empresa ou organização, tornando-a mais eficiente e rápida. Isso resulta em um melhor atendimento aos clientes e em um ambiente de trabalho mais produtivo.
 
-***
+## Impedimentos
+ - Dificuldade em compartilhar o chatbot;
 
-## O que será avaliado?
-
-- Projeto em produção na AWS;
-- Entendimento do chatbot e o que ele soluciona;
-- Criatividade em relação ao tema escolhido para o desenvolvimento do chatbot;
-- Intents e slots criados e informações que eles se dispõem a obter;
-- Organização:  
-  - Estrutura de intenções;  
-  - Estrutura da lógica de negócio;  
-  - Divisão de responsabilidades da equipe;  
-  - Funcionalidade do chatbot;
-- Objetividade do README.md.
-
-***
-
-## Entrega
-
-- Aceitar o convite do repositório da sprint-7-pb-aws-ifce;
-- **O trabalho deve ser feito em grupos de 3 ou 4 integrantes**;
-  - Não repetir formação de grupos já criados em sprints anteriores;
-- Criar uma branch no repositório com o formato grupo-número (Exemplo: grupo-1);
-- Subir o trabalho na branch com um README.md;
-  - Documentar detalhes sobre como a avaliação foi desenvolvida;
-  - Dificuldades conhecidas;
-  - Como utilizar o sistema;
-  - Export do bot Lex em formato .zip;
-- O prazo de entrega é até às 12h do dia 27/02/2023 no repositório do github ([https://github.com/Compass-pb-aws-2022-IFCE/sprint-7-pb-aws-ifce](https://github.com/Compass-pb-aws-2022-IFCE/sprint-7-pb-aws-ifce)).
+## Acesso ao Chatbot
+Para acessar a aplicação [clica nesse link](https://join.slack.com/t/cite-grupo/shared_invite/zt-1qinm3z0j-RCLi3fD5x5wsudHVsclkAQ).
+## Equipe
+- Rangel Melo.
+- Luiz Carlos.
+- Tecla Fernandes. 
